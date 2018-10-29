@@ -1,5 +1,5 @@
 public static int bsearch(int[] array, int number) {
-    if (array != null && array.length  0 && array[array.length - 1]  number) {   Проверяем, существует ли решение
+    if (array != null && array.length  0 && array[array.length - 1]  number) {   // РџСЂРѕРІРµСЂСЏРµРј, СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё СЂРµС€РµРЅРёРµ
         return bsearch(array, number, 0, array.length);
     } else return -1;
 }
