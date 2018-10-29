@@ -1,13 +1,14 @@
 public static int bsearch(int[] array, int number) {
-    if (array != null && array.length  0 && array[array.length - 1]  number) {   Ïğîâåğÿåì, ñóùåñòâóåò ëè ğåøåíèå
+    if (array != null && array.length > 0 && array[array.length - 1] < number) {  // ĞŸÑ€Ğ¾Ğ²ĞµÑ€ÑĞµĞ¼, ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒĞµÑ‚ Ğ»Ğ¸ Ñ€ĞµÑˆĞµĞ½Ğ¸Ğµ
         return bsearch(array, number, 0, array.length);
     } else return -1;
 }
 
 public static int bsearch(int[] array, int number, int first, int last) {
-    if (last  first) {
-        int midle = (last + first)/2;
-        if (array[midle] = number) {
+
+    if (last > first) {
+        int midle = (last + first) / 2;
+        if (array[midle] >= number) {
             return bsearch(array, number, midle + 1, last);
         } else {
             return bsearch(array, number, first, midle);
